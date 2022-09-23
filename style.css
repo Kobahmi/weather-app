@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --content-font-family: Nunito, sans-serif;
+  --content-font-color: white;
+  --content-font-size: 1rem;
+  --content-font-size-medium: 1.3rem;
+  --content-font-size-big: 5rem;
+}
+
+.content {
+  height: 100vh;
+  display: grid;
+  grid-row: 1/3;
+  grid-column: 1/2;
+  color: var(--content-font-color);
+  font-family: var(--content-font-family);
+  font-size: var(--content-font-size);
+}
+
+.content > * {
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+
+.button {
+  display: none;
+}
+
+.background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  filter: brightness(50%);
+}
+
+.search-bar {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.search {
+  padding: 0.5rem;
+  border-radius: 10px;
+  height: 2.7rem;
+  border: none;
+  color: black;
+  font-family: var(--content-font-family);
+  font-size: var(--content-font-size);
+  color: rgb(0, 0, 0);
+  transition: 0.1s ease-in-out;
+  outline: none;
+}
+
+.search:hover {
+  scale: 105%;
+}
+
+input[type="text"] {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: var(--content-font-size-medium);
+  margin-bottom: 10rem;
+  margin-top: 3rem;
+}
+
+.city {
+  text-align: center;
+}
+
+.weather {
+  display: flex;
+  gap: 3rem;
+}
+
+.feels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feels-column {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.humidity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.humid-column {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.wind {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wind-column {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.degrees {
+  border-right: solid 2px white;
+  padding-right: 3rem;
+  display: flex;
+  font-size: var(--content-font-size-big);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    text-align: center;
+  }
+
+  .text-content {
+    font-size: clamp(0.5rem, 1rem, 5rem);
+  }
+
+  .degrees {
+    border-right: none;
+    font-size: clamp(1rem, 3rem, 5rem);
+    padding-right: 0;
+  }
+
+  .weather {
+    flex-direction: column;
+  }
+}
