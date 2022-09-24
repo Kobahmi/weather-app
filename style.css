@@ -138,6 +138,27 @@ input[type="text"] {
   gap: 1rem;
 }
 
+.city-weather-container {
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.celsius-container {
+  display: flex;
+  justify-content: center;
+  width: 20rem;
+  gap: 1rem;
+  opacity: 0;
+  position: relative;
+  transition: 1s ease-in-out;
+}
+
+.check[type="checkbox"] {
+  position: absolute;
+  left: 26%;
+  top: 25%;
+}
+
 @media screen and (max-width: 600px) {
   body {
     text-align: center;
@@ -151,6 +172,12 @@ input[type="text"] {
     border-right: none;
     font-size: clamp(1rem, 3rem, 5rem);
     padding-right: 0;
+  }
+
+  .check[type="checkbox"] {
+    position: absolute;
+    left: 30%;
+    top: 20%;
   }
 
   .weather {
