@@ -29,14 +29,29 @@
   grid-column: 1/2;
 }
 
+.form {
+  position: relative;
+}
+
 .button {
-  display: none;
+  width: 2rem;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  right: 2%;
+  top: 22%;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.search-button {
+  width: 1.5rem;
 }
 
 .background {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: cover;
   height: 100%;
   width: 100%;
   z-index: -1;
