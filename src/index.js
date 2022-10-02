@@ -21,7 +21,7 @@ toggleType.addEventListener("change", async () => {
     temperatureText.innerText = "Metric";
     temperatureChange.innerText = "°C";
     temperatureTwoChange.innerText = "°C";
-    windChange.innerText = "KM/H";
+    windChange.innerText = "M/S";
     const weatherInfo = await dataHandle.getWeather(searchInput.value);
     searchResult(weatherInfo);
   } else {
@@ -41,7 +41,7 @@ form.addEventListener("submit", async (e) => {
     temperatureText.innerText = "Metric";
     temperatureChange.innerText = "°C";
     temperatureTwoChange.innerText = "°C";
-    windChange.innerText = "KM/H";
+    windChange.innerText = "M/S";
     const weatherInfo = await dataHandle.getWeather(searchInput.value);
     searchResult(weatherInfo);
   } else {
